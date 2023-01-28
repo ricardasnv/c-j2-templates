@@ -1,0 +1,5 @@
+{% for fruit,score in fruits %}
+#define update_{{ fruit }}(...) \
+	flag_t flag = determine_flag_{{ fruit }}(__VA_ARGS__); \
+	update(&object_{{ fruit }}, flag);
+{% endfor %}
